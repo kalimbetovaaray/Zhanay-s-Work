@@ -32,7 +32,7 @@ input[type="text"], input[type="password"], textarea {
 	padding: 0; 				/* убираем внутренние отступы дл¤ текстовых полей */
 }
 input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
-	vertical-align: bottom;
+	vertical-align: inherit;
 }
 input[type="radio"] {
 	vertical-align: text-bottom;
