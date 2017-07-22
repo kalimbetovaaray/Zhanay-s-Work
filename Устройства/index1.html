@@ -4,7 +4,36 @@
 <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="styles1.css" />
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link href="путь_к_файлу/jquery.formstyler.css" rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="путь_к_файлу/jquery.formstyler.min.js"></script>
 <title></title>
+<script>
+	(function($) {
+$(function() {
+
+  $('input, select').styler();
+
+});
+})(jQuery);
+$('button').click(function(e) {
+  e.preventDefault();
+  /* делаем чекбокс неактивным */
+  $('input:checkbox').attr('disabled', true)
+    /* обновляем состояние псевдочекбокса */
+    .trigger('refresh');
+});
+$('form').validate({
+  invalidHandler: function() {
+
+    setTimeout(function() {
+      $('input, select').trigger('refresh');
+    }, 1)
+
+  }
+});
+</script>
 </head>
 <body>
 	<header class="header clearfix">
@@ -251,25 +280,30 @@
 			</tr>
 		</table>
 	</div>
-	<footer class="footer clearfix">
-		<div class="logo clearfix" >
-			<img src="images/image.jpg" alt=""/>
-		</div>
-		<div class="right clearfix">
-			<p class="from">
-				143072, Россия, Московская область,<br/>
-				Одинцовский район, <br/>
-				г. Кубинка, шоссе Наро-Фоминское, дом 1- Г<br/>
-			</p>
-			<p class="tell-clock">
-				Телефон технической поддержки:<br/>
-				8(495) 726 89 72<br/>
-				Режим работы:c 9:00 до 18:00
-			</p>
-		</div>
-	</footer>
-	<div class="footer_">
-			<p>&copy 2017 ООО «Кубинка Энергосервис»</p>
+	<div class="bottom-main">
+		<footer class="footer clearfix">
+			<div class="logo clearfix" >
+				<img src="images/logo1.jpg" alt=""/>
+			</div>
+			<div class="right clearfix">
+				<p class="from">
+					143072, Россия, Московская область,<br/>
+					Одинцовский район, <br/>
+					г. Кубинка, шоссе Наро-Фоминское, дом 1- Г<br/>
+				</p>
+				<p class="tell-clock">
+					Телефон технической поддержки:<br/>
+					8(495) 726 89 72<br/>
+					Режим работы:c 9:00 до 18:00
+				</p>
+			</div>
+		</footer>
 	</div>
+	<div class="bottom-main">
+		<div class="footer_">
+				<p>&copy 2017 ООО «Кубинка Энергосервис»</p>
+		</div>
+	</div>
+	
 </body>
 </html>
