@@ -1,40 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"> 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="styles1.css" />
-<link rel="stylesheet" type="text/css" href="css/styles.css" />
-<link href="путь_к_файлу/jquery.formstyler.css" rel="stylesheet" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="путь_к_файлу/jquery.formstyler.min.js"></script>
-<title></title>
-<script>
-	(function($) {
-$(function() {
-
-  $('input, select').styler();
-
-});
-})(jQuery);
-$('button').click(function(e) {
-  e.preventDefault();
-  /* делаем чекбокс неактивным */
-  $('input:checkbox').attr('disabled', true)
-    /* обновляем состояние псевдочекбокса */
-    .trigger('refresh');
-});
-$('form').validate({
-  invalidHandler: function() {
-
-    setTimeout(function() {
-      $('input, select').trigger('refresh');
-    }, 1)
-
-  }
-});
-</script>
-</head>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link href="css/jquery.formstyler.css" rel="stylesheet" />
+		<title>Устройства</title>
+	</head>
 <body>
 	<header class="header clearfix">
 		<div class="logo">
@@ -77,42 +49,41 @@ $('form').validate({
 	<div class="main">
 		<form action="" method="get"  class="search1">
 			<input type="search" class="search" placeholder="Введите ключевые слова.."/>
-			<p><select class="select">
+			<select class="select">
 				<option disabled selected value >Выбор устройства</option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-			   </select>
-			   <select class="select1">
+				<option value="">Устройство 1</option>
+				<option value="">Устройство 2</option>
+				<option value="">Устройство 3</option>
+				<option value="">Устройство 4</option>
+			</select>
+			<select class="select1">
 				<option disabled selected value>Действия с группами</option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-			   </select>
-			   <select class="select2">
+				<option value="">Группа 1</option>
+				<option value="">Группа 2</option>
+				<option value="">Группа 3</option>
+				<option value="">Группа 4</option>
+			</select>
+			<select class="select2">
 				<option disabled selected value>Команды</option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-			   </select>
-			   <select class="select3">
+				<option value="">Команда 1</option>
+				<option value="">Команда 2</option>
+				<option value="">Команда 3</option>
+				<option value="">Команда 4</option>
+			</select>
+			<select class="select3">
 				<option disabled selected value>Дата создания</option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-			   </select>
-			   <select class="select4">
-				<option disabled selected value>Все устройства</option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
-			   </select>
-			   </p>
+				<option value="">Дата 1</option>
+				<option value="">Дата 2</option>
+				<option value="">Дата 3</option>
+				<option value="">Дата 4</option>
+			</select>
+			<select class="select4">
+			<option disabled selected value>Все устройства</option>
+			   <option value="">Устройство 1</option>
+			   <option value="">Устройство 1</option>
+			   <option value="">Устройство 1</option>
+			   <option value="">Устройство 1</option>
+			</select>
 		</form>
 	</div>
 	<div class="content">
@@ -304,6 +275,17 @@ $('form').validate({
 				<p>&copy 2017 ООО «Кубинка Энергосервис»</p>
 		</div>
 	</div>
-	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.formstyler/1.7.8/jquery.formstyler.min.js"></script>
+	<script>
+        (function($) {
+            $(function() {
+
+                $('input, select').styler();
+
+            });
+        })(jQuery);
+	</script>
 </body>
 </html>
